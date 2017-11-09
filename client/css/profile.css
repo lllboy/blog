@@ -1,0 +1,43 @@
+#profile-page-header{
+	margin-top: -20px;
+}
+.card {
+	overflow: hidden;
+
+}
+.collection{
+	border: none !important;
+}
+#profile-page-header .card-image {
+	height: 250px;
+}
+#profile-page-header .card-profile-image {
+	position: absolute;
+	top: 200px;
+	z-index: 1;
+	left: 5%;
+	cursor: pointer;
+	margin: 0;
+}
+.card-profile-image img{
+	max-width: 90px;
+	max-height: 90px;
+	width: 90px;
+	height: 90px;
+}
+#profile-page-header .card-content {
+	margin-top: -40px;
+}
+#content .container .row {
+	margin-bottom: 0;
+}
+
+#profile-page-wall{
+	margin-top: 0.5em;
+}
+
+#delete-joke{
+	margin-left: 70%;
+	margin-bottom: 10px;
+}
+

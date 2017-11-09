@@ -1,0 +1,44 @@
+<template name="jokeItem">
+    <div class="row">
+        <div class="col s12">
+            <div id="blog-post-full">
+                <!-- medium size post-->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-profile-title">
+                            <div class="row">
+                                <div class="col s1">
+                                    {{#with UserImages}}
+                                        <img class="circle userImage responsive-img profile-post-image profile-medium" src="{{image}}">
+                                    {{/with}}
+                                </div>
+                                <div class="col s10">
+                                    <p class="grey-text text-darken-4 margin">{{author}}</p>
+                                    <span class="grey-text text-darken-1 ultra-small"><i class="fa fa-clock-o" aria-hidden="true"></i> {{date.minute}}</span>
+                                </div>
+                                <div class="col s1 right-align">
+                                    <a href="#"><i class="fa fa-thumbs-o-up green-text" id="laugh" aria-hidden="true">{{laughScore}}</i></a>
+                                    <a href="#"><i class="fa fa-commenting-o green-text" aria-hidden="true">{{commentCount}}</i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <p>{{jokePost}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        {{> commentsForm}}
+                        {{> commentsItem}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</template>

@@ -1,0 +1,16 @@
+<template name="commentsItem">
+    <ul id="profile-page-about-feed" class="collection">
+        {{#each comments}}
+            <li class="collection-item avatar">
+                {{#with UserImages}}
+                    <img class="circle responsive-img profile-post-image profile-medium" src="{{image}}">
+                {{/with}}
+                <span class="title">{{username}}</span>
+                <p class="grey-text text-darken-1 ultra-small" >{{date.minute}}</p>
+                <p>{{Content}}</p>
+
+            </li>
+        {{/each}}
+
+    </ul>
+</template>

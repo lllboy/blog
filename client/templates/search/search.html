@@ -1,0 +1,99 @@
+<template name="search">
+	<!-- search -->
+	<div id="search-wrap" class="nav">
+		<!-- Easy Search -->
+		<div class="searchbar">
+			{{> EasySearch.Input index=index attributes=inputAttributes }}
+		</div>
+
+		{{#EasySearch.IfInputEmpty index=index }}
+			<div class="padded examples">For example "Yo Mamma"</div>
+		{{else}}
+			{{#if resultsCount}}
+				<div class="padded count-results">{{resultsCount}} results found.</div>
+			{{/if}}
+		{{/EasySearch.IfInputEmpty}}
+
+		{{#EasySearch.IfSearching index=index }}
+			<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            <span class="center-align">loading....</span>
+		{{/EasySearch.IfSearching}}
+
+		<ol class="leaderboard">
+			{{#EasySearch.Each index=index }}
+				{{> User}}
+			{{/EasySearch.Each}}	
+		</ol>
+
+		{{#EasySearch.IfNoResults index=index }}
+			<div class="padded no-results">No results found</div>
+		{{else}}
+		{{/EasySearch.IfNoResults}}
+
+		{{> EasySearch.Pagination index=index maxPages=10 }}
+		{{! > EasySearch.LoadMore index=index}}
+
+		{{#if showMore}}
+			{{> EasySearch.Input name="mini-index" index=index attributes=inputAttributes }}
+			<ul>
+				{{#EasySearch.Each name="mini-index" index=index}}
+					<li>{{name}}</li>
+				{{/EasySearch.Each}}
+			</ul>
+
+		{{/if}}
+		<!-- Easy Search -->
+	</div>
+	<!-- End search -->
+</template>
+
+<template name="User">
+	<li class="user {{selected}}" id="user-link">
+		<span class="name">{{jokeName}}</span>
+		{{#if selected}}
+		<div class="jokeInfo">
+			<div>
+				<span class="posy">{{jokePost}}</span>
+			</div>
+				<br>
+			<div>
+				<span class="author">Author: {{author}}</span>
+			</div>
+				<br>
+			<div>
+				<span class="vote-score">Laugh Score: {{laughScore}}</span>
+			</div>
+				<br>
+			<div>
+				<span class="vote-score">Frown Score: {{frownScore}}</span>
+			</div>
+				<br>
+			<div>
+				<span class="vote-score">Puke Score: {{pukeScore}}</span>
+			</div>
+		</div>
+		{{/if}}
+	</li>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

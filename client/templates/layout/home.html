@@ -1,0 +1,121 @@
+
+<template name="home">
+    <!--   index banner   -->
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                </div>
+                <div class="row center">
+                    {{#if currentUser}}
+                        <a href="/jokes" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 z-depth-2">Go TO</a>
+                    {{else}}
+                        <a href="/login" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 z-depth-2">Get Started</a>
+                    {{/if}}
+
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="back1.jpg" alt="Unsplashed background "></div>
+    </div>
+    <!--   features   -->
+    <div id="features" class="features">
+        <div class="container-wide">
+            <div class="features-divider">
+                <i class="material-icons">clear_all</i>
+            </div>
+            <div class="features-title">Features</div>
+            <div class="features-container">
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col l3">
+                        <div class="feature-icon">
+                            <i class="material-icons">dashboard</i>
+                        </div>
+                        <div class="feature-title">Visual Editing in Browser</div>
+                        <div class="feature-description">Create a website without thinking about content editing. Have content editing layer for free without spending a minute.</div>
+                    </div>
+                    <div class="col l3">
+                        <div class="feature-icon">
+                            <i class="material-icons">subtitles</i>
+                        </div>
+                        <div class="feature-title">Jekyll and Static Websites</div>
+                        <div class="feature-description">We support anything that builds with a Dockerfile, but we optimize
+                            the experience for Jekyll and Static Websites.</div>
+                    </div>
+                    <div class="col l3">
+                        <div class="feature-icon">
+                            <i class="material-icons">loop</i>
+                        </div>
+                        <div class="feature-title">Upload and sync with GitHub</div>
+                        <div class="feature-description">Got a website already? We'll provide the Visual Editing layer then.
+                            Create feature branches and Pull Requests with Visual Editor.</div>
+                    </div>
+                    <div class="col l3">
+                        <div class="feature-icon">
+                            <i class="material-icons">airplay</i>
+                        </div>
+                        <div class="feature-title">Code Editing in Browser</div>
+                        <div class="feature-description">Need to do some bigger design changes? Edit all your CSS, HTML and JavaScript files
+                            in your browser.</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--   parallax-container valign-wrapper   -->
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="back2.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <!--   footer   -->
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h4>Contact Us</h4>
+                    <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Company Bio</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+</template>

@@ -1,0 +1,48 @@
+<template name="sidebar">
+    <nav class="z-depth-2">
+        <div class="nav-wrapper nav-color">
+            <a href="/" class="brand-logo">blog</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                {{#if currentUser}}
+                    <li><a class="link-blue" href="/jokes" ><i class="fa fa-comments-o"></i>Jokes</a></li>
+                    <li><a class="link-yellow" href="/rankings" ><i class="fa fa-trophy"></i>Rankings</a></li>
+                    <li><a class="link-green" href="/search" id="search-link"><i class="fa fa-search"></i>Search</a></li>
+                    <li><a href="/profile" ><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a class="logout" href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+                {{else}}
+                    <li><a class="login" href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+                {{/if}}
+            </ul>
+            <!-- mobile demo -->
+            <ul class="side-nav" id="mobile-demo">
+                {{#if currentUser}}
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="back.jpg">
+                            </div>
+                            {{#with UserImages}}
+                                <img src="{{image}}" class="circle">
+                            {{/with}}
+                            <a href="#!name"><span class="white-text name">{{username}}</span></a>
+                            <a href="#!email"><span class="white-text email">{{email}}</span></a>
+                        </div>
+                    </li>
+                {{/if}}
+                {{#if currentUser}}
+                    <li><a href="/profile" ><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a  href="/jokes" ><i class="fa fa-comments-o"></i>Jokes</a></li>
+                    <li><a  href="/rankings" ><i class="fa fa-trophy"></i>Rankings</a></li>
+                    <li><a  href="/search" ><i class="fa fa-search"></i>Search</a></li>
+                {{/if}}
+                {{#if currentUser}}
+                    <li><a class="logout" href="#" id="logout-link"><i class="fa fa-sign-out"></i>Logout</a></li>
+                {{else}}
+                    <li><a class="login" href="/login" id="login-link"><i class="fa fa-sign-in"></i>Login</a></li>
+                {{/if}}
+            </ul>
+            <!-- mobile demo end -->
+        </div>
+    </nav>
+</template>
